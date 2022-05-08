@@ -820,7 +820,7 @@ public abstract class AbstractItem extends Actionable implements Item, HttpDelet
             throws IOException {
         if (req.getMethod().equals("GET")) {
             // read
-            rsp.setContentType("application/xml");
+            rsp.setContentType("application/json");
             writeConfigDotXml(rsp.getOutputStream());
             return;
         }

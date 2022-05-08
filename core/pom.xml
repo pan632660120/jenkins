@@ -42,6 +42,9 @@ THE SOFTWARE.
     <staplerFork>true</staplerFork>
     <hamcrest.version>2.2</hamcrest.version>
     <xmlunit.version>2.9.0</xmlunit.version>
+    <fastjson.version>1.2.80</fastjson.version>
+    <jettison.version>1.4.1</jettison.version>
+    <mongo-driver.version>3.12.11</mongo-driver.version>
   </properties>
 
   <dependencyManagement>
@@ -290,6 +293,11 @@ THE SOFTWARE.
       <artifactId>groovy-all</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.codehaus.jettison</groupId>
+      <artifactId>jettison</artifactId>
+      <version>${jettison.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.connectbot.jbcrypt</groupId>
       <artifactId>jbcrypt</artifactId>
     </dependency>
@@ -417,6 +425,11 @@ THE SOFTWARE.
           <artifactId>commons-jexl</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>${mongo-driver.version}</version>
     </dependency>
     <dependency>
       <groupId>org.ow2.asm</groupId>
@@ -559,6 +572,7 @@ THE SOFTWARE.
       <version>${xmlunit.version}</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>

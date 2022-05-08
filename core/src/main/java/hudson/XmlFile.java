@@ -206,7 +206,7 @@ public final class XmlFile {
                 ? new AtomicFileWriter(file)
                 : new AtomicFileWriter(file.toPath(), StandardCharsets.UTF_8, false, false);
         try {
-            w.write("<?xml version='1.1' encoding='UTF-8'?>\n");
+//            w.write("<?xml version='1.1' encoding='UTF-8'?>\n");
             beingWritten.put(o, null);
             writing.set(file);
             try {

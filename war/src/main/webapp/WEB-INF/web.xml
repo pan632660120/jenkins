@@ -171,6 +171,16 @@ THE SOFTWARE.
     <listener-class>jenkins.JenkinsHttpSessionListener</listener-class>
   </listener>
 
+  <!-- Spring随项目启动 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- Spring配置文件位置 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:application.xml</param-value>
+  </context-param>
+
   <!--
     JENKINS-1235 suggests containers interpret '*' as "all roles defined in web.xml"
     as opposed to "all roles defined in the security realm", so we need to list some
@@ -215,13 +225,13 @@ THE SOFTWARE.
     <!-- no security constraint --> 
   </security-constraint>
 
-  <login-config>
-    <auth-method>FORM</auth-method>
-    <form-login-config>
-      <form-login-page>/login</form-login-page>
-      <form-error-page>/loginError</form-error-page>
-    </form-login-config>
-  </login-config>
+<!--  <login-config>-->
+<!--    <auth-method>FORM</auth-method>-->
+<!--    <form-login-config>-->
+<!--      <form-login-page>/login</form-login-page>-->
+<!--      <form-error-page>/loginError</form-error-page>-->
+<!--    </form-login-config>-->
+<!--  </login-config>-->
 
 
   <!-- if specified, this value is used as the Hudson home directory -->
